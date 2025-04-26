@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion"; // Make sure to import motion from framer-motion
 import step1Icon from '../assets/step1.png';
 import step2Icon from '../assets/step2.png';
 import step3Icon from '../assets/step3.png';
@@ -43,16 +44,54 @@ const StepsSection = () => {
   return (
     <section className="relative py-10 sm:py-16 md:py-20 px-4 bg-white text-center overflow-hidden">
 
-      {/* Responsive Blurred Background Circles */}
-      <div className="absolute top-1/2 -left-20 sm:left-0 md:left-20 lg:left-32 
-                      w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 
-                      bg-gradient-to-r from-[#f78c1e] to-[#ffd1a6] 
-                      rounded-full filter blur-2xl sm:blur-3xl opacity-20 sm:opacity-30 z-0"></div>
+      {/* Animated Blurred Background Circles */}
+      <motion.div 
+        className="absolute top-1/2 -left-20 sm:left-0 md:left-20 lg:left-32 
+                   w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 
+                   bg-gradient-to-r from-[#f78c1e] to-[#ffd1a6] 
+                   rounded-full filter blur-2xl sm:blur-3xl opacity-20 sm:opacity-30 z-0"
+        animate={{
+          background: [
+            'linear-gradient(90deg, #f78c1e 0%, #ffd1a6 100%)',
+            'linear-gradient(135deg, #f78c1e 0%, #ffb66e 60%, #ffd1a6 100%)',
+            'linear-gradient(180deg, #f78c1e 0%, #ffd1a6 100%)',
+            'linear-gradient(225deg, #f78c1e 0%, #ffb66e 60%, #ffd1a6 100%)',
+            'linear-gradient(270deg, #f78c1e 0%, #ffd1a6 100%)',
+            'linear-gradient(90deg, #f78c1e 0%, #ffd1a6 100%)',
+          ],
+          scale: [1.2, 1, 0.8, 0.6, 0.7, 0.9]
+        }}
+        transition={{
+          duration: 20,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+      />
       
-      <div className="absolute top-20 -right-20 sm:right-0 md:right-20 lg:right-32 
-                      w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 
-                      bg-gradient-to-r from-[#f78c1e] to-[#ffd1a6] 
-                      rounded-full filter blur-2xl sm:blur-3xl opacity-20 sm:opacity-30 z-0"></div>
+      <motion.div 
+        className="absolute top-20 -right-20 sm:right-0 md:right-20 lg:right-32 
+                   w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 
+                   bg-gradient-to-r from-[#f78c1e] to-[#ffd1a6] 
+                   rounded-full filter blur-2xl sm:blur-3xl opacity-20 sm:opacity-20 z-0"
+        animate={{
+          background: [
+            'linear-gradient(270deg, #f78c1e 0%, #ffd1a6 100%)',
+            'linear-gradient(315deg, #f78c1e 0%, #ffb66e 60%, #ffd1a6 100%)',
+            'linear-gradient(0deg, #f78c1e 0%, #ffd1a6 100%)',
+            'linear-gradient(45deg, #f78c1e 0%, #ffb66e 60%, #ffd1a6 100%)',
+            'linear-gradient(90deg, #f78c1e 0%, #ffd1a6 100%)',
+            'linear-gradient(270deg, #f78c1e 0%, #ffd1a6 100%)',
+          ],
+          scale: [1, 0.9, 0.8, 0.6, 0.7, 0.9]
+        }}
+        transition={{
+          duration: 20,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+      />
 
       {/* Main Content */}
       <h4 className="relative text-[#F78C1E] text-sm sm:text-base font-semibold mb-4 z-10">
