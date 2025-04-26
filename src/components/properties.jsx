@@ -39,7 +39,7 @@ const PropertiesSection = () => {
     <div className="relative flex flex-col items-center justify-center px-4 py-12 md:p-8 overflow-hidden">
       {/* Blurred Gradient Circles - Made responsive and positioned better for smaller screens */}
      {/* First circle - top left */}
-     <div className="absolute top-0 -left-16 sm:left-0 md:left-20 lg:left-40 
+     <div className="absolute top-[100px] -left-16 sm:left-0 md:left-20 lg:left-40
                      w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96
                      bg-gradient-to-r from-[#f78c1e] to-[#ffd1a6] 
                      rounded-full filter blur-2xl sm:blur-3xl opacity-20 sm:opacity-30 z-0
