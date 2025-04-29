@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-import arrowIcon from '../assets/Arrow.png'
+import { FiArrowRight } from "react-icons/fi";
 import image1 from '../assets/projectimg1.png'
 import image2 from '../assets/projectimg2.png'
 import image3 from '../assets/projectimg3.png'
@@ -31,7 +31,7 @@ const ProjectsSection = () => {
             <button className='w-full md:w-auto bg-[#101827] py-3 sm:py-3 md:py-[14px] px-4 sm:px-5 md:px-[20px] border rounded-lg md:rounded-[8px] mt-4 md:mt-8'>
               <div className='flex items-center justify-center md:justify-start gap-2 md:gap-4'>
                 <p className='text-white text-sm sm:text-base lg:text-[16px] font-semibold'>Want Results Like These? Contact Us</p>
-                <img src={arrowIcon} alt='Continue' className='w-3 h-3 sm:w-4 sm:h-4 md:w-[15px] md:h-[15px]'></img>
+                <FiArrowRight className='text-white text-xl'/>
               </div>
             </button>
           </div>
@@ -83,7 +83,7 @@ const ProjectsSection = () => {
           <button className='bg-[#101827] py-3 sm:py-3 md:py-[14px] px-4 sm:px-5 md:px-[20px] border rounded-lg md:rounded-[8px] mt-6 sm:mt-6 md:mt-8'>
             <div className='flex items-center gap-2 md:gap-4'>
               <p className='text-white text-sm sm:text-base lg:text-[16px] font-semibold'>View All Project</p>
-              <img src={arrowIcon} alt='Continue' className='w-3 h-3 sm:w-4 sm:h-4 md:w-[15px] md:h-[15px]'></img>
+              <FiArrowRight className='text-white text-xl'/>
             </div>
           </button>
         </div>

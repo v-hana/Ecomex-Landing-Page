@@ -1,6 +1,7 @@
 import React from 'react'
 import img from '../assets/MAGNET.png'
-import arrowIcon from '../assets/Arrow.png'
+
+import { FiArrowRight } from "react-icons/fi";
 
 const DownloadSection = () => {
   return (
@@ -23,10 +24,10 @@ const DownloadSection = () => {
         <p className='text-sm sm:text-base lg:text-[16px] font-normal text-[#101827]'>
           Discover the key strategies and expert insights you need to successfully launch and grow your online store in 2025. This guide covers everything from choosing the right platform and setting up payments to driving traffic and scaling your business
         </p>
-        <button className='bg-[#101827] w-full sm:w-[50%] md:w-[60%] lg:w-[35%] py-3 md:py-[14px] px-4 md:px-[20px] border rounded-md md:rounded-[8px]'>
+        <button className='bg-[#101827] w-full sm:w-[50%] md:w-[60%] lg:w-[36%] py-3 md:py-[14px] px-4 md:px-[20px] border rounded-md md:rounded-[8px]'>
           <div className='flex items-center justify-center md:justify-start gap-2 md:gap-4'>
             <p className='text-white text-sm sm:text-base lg:text-[16px] font-semibold'>Download Now</p>
-            <img src={arrowIcon} alt='Continue' className='w-3 h-3 sm:w-4 sm:h-4 md:w-[15px] md:h-[15px]'></img>
+           <FiArrowRight className='text-white text-xl'/>
           </div>
         </button>
       </div>

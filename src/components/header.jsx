@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
 import logo from '../assets/logo.png';
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import shopifyImg from '../assets/img4.png';
+import customImg from '../assets/img3.png';
+import mobileImg from '../assets/img1.png';
+import wooImg from '../assets/img5.png';
+import sellaImg from '../assets/img2.png';
+
+import img from '../assets/HeadStar.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +57,7 @@ const Header = () => {
 
   return (
     <header className={`top-0 left-0 right-0 z-50 bg-white ${scrolled ? 'shadow-md' : ''} transition-shadow duration-300`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="flex-shrink-0">
           <img src={logo} alt="Logo" className="h-8 sm:h-10" />
@@ -60,17 +68,17 @@ const Header = () => {
           <div className="relative dropdown-container">
             <button
               onClick={toggleMenu}
-              className="text-sm text-gray-700 hover:text-orange-500 transition-colors duration-200"
+              className="flex items-center gap-2 text-gray-700 hover:text-orange-500 transition-colors duration-200"
             >
-              Portfolio
+              <p className="text-sm">Portfolio</p> <MdOutlineKeyboardArrowDown className="text-md"/>
             </button>
 
             {/* Dropdown Menu */}
             {isMenuOpen && (
-              <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg p-4 z-10">
+              <div className="absolute top-full left-0 mt-2 w-[450px] bg-white rounded-lg shadow-lg p-4 z-10">
                 <div className="flex flex-col sm:flex-row">
                   {/* Left Section */}
-                  <div className="w-full sm:w-1/3 p-2 bg-gradient-to-b from-[#FFBA73] to-[#FFFFFF] rounded-lg mb-3 sm:mb-0">
+                  <div className="flex flex-col justify-end w-full sm:w-1/3 p-2 bg-gradient-to-b from-[#FFBA73] to-[#FFFFFF] rounded-lg mb-3 sm:mb-0">
                     <h4 className="font-semibold text-gray-700 mb-2">All Features</h4>
                     <p className="text-xs text-gray-600">
                       To empower businesses by creating audience-driven, scalable e-commerce solutions that foster trust, engagement, and sustainable growth.
@@ -78,14 +86,49 @@ const Header = () => {
                   </div>
 
                   {/* Right Section */}
-                  <div className="w-full sm:w-2/3 sm:pl-4">
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li><strong>Shopify</strong> <p className="text-xs text-gray-500">E-commerce solutions for your business needs</p></li>
+                  <div className="flex flex-col gap-2 w-[300px] ml-2">
+                    {/* <ul className="space-y-2 text-sm text-gray-700">
+                      <li className="flex"><img src={shopifyImg}></img> <strong>Shopify</strong> <p className="text-xs text-gray-500">E-commerce solutions for your business needs</p></li>
                       <li><strong>WooCommerce</strong> <p className="text-xs text-gray-500">Flexible and scalable online store solutions</p></li>
                       <li><strong>Custom Builds</strong> <p className="text-xs text-gray-500">Tailored solutions for unique business requirements</p></li>
                       <li><strong>Sella</strong> <p className="text-xs text-gray-500">Simplified e-commerce management for small businesses</p></li>
                       <li><strong>Mobile App Develop</strong> <p className="text-xs text-gray-500">Custom e-commerce apps to reach customers</p></li>
-                    </ul>
+                    </ul> */}
+                    <div className="flex items-center gap-2">
+                      <img src={shopifyImg} className="w-10 h-10"></img>
+                      <div>
+                        <h2 className="text-[16px] font-[500]">Shopify</h2>
+                        <p className="text-[13px] font-[400]">E-commerce solutions for your business needs</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <img src={wooImg} className="w-10 h-10"></img>
+                      <div>
+                        <h2 className="text-[16px] font-[500]">WooCommerce</h2>
+                        <p className="text-[13px] font-[400]">Flexible and scalable online store solutions</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <img src={customImg} className="w-10 h-10"></img>
+                      <div>
+                        <h2 className="text-[16px] font-[500]">Custom Builds</h2>
+                        <p className="text-[13px] font-[400]">Tailored solutions for unique business requirementsbusiness needs</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <img src={sellaImg} className="w-10 h-10"></img>
+                      <div>
+                        <h2 className="text-[16px] font-[500]">Sella</h2>
+                        <p className="text-[13px] font-[400]">Simplified e-commerce management for small businesses</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <img src={mobileImg} className="w-10 h-10"></img>
+                      <div>
+                        <h2 className="text-[16px] font-[500]">Mobile App Develop</h2>
+                        <p className="text-[13px] font-[400]">Custom e-commerce apps to reach customers </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -95,6 +138,7 @@ const Header = () => {
           <button className="text-sm text-gray-700 hover:text-orange-500 transition-colors duration-200">Home</button>
           <button className="text-sm text-gray-700 hover:text-orange-500 transition-colors duration-200">About Us</button>
           <button className="text-sm text-gray-700 hover:text-orange-500 transition-colors duration-200">Services</button>
+          <img src={img} alt='img' className="w-3 h-3"></img>
 
           <button className="bg-gradient-to-b from-[#F78C1E] to-[#FEE6D6] hover:from-[#F78C1E] hover:to-[#F78C1E] text-white px-4 py-2 rounded-md text-sm transition-all duration-300">
             Get Started

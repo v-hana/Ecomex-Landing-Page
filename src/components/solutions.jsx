@@ -33,14 +33,14 @@ const services = [
     description: "Flexible, scalable WordPress stores tailored to you",
     note: "Perfect for: Custom features, budget-friendly growth",
     button: "Start with WooCommerce",
-    icon: <img src={wooImg} alt="Woo Icon" className="w-32 h-28 sm:w-40 sm:h-36 md:w-48 md:h-40 lg:w-54 lg:h-48" />,
+    icon: <img src={wooImg} alt="Woo Icon" className="w-32 h-28 sm:w-40 sm:h-36 md:w-48 md:h-40 lg:w-56 lg:h-48" />,
   },
   {
     title: "Sella Development",
     description: "Simplified e-commerce with Sella's modern tools",
     note: "Perfect for: Small businesses, easy management",
     button: "Explore Sella",
-    icon: <img src={sellaImg} alt="Sella Icon" className="w-32 h-28 sm:w-40 sm:h-36 md:w-48 md:h-40 lg:w-54 lg:h-48" />,
+    icon: <img src={sellaImg} alt="Sella Icon" className="w-32 h-28 sm:w-40 sm:h-36 md:w-48 md:h-40 lg:w-56 lg:h-48" />,
   },
 ];
 
@@ -73,22 +73,27 @@ const ServicesSection = () => {
           {services.slice(0, 2).map((service, index) => (
             <motion.div
               key={index}
-              className="w-full sm:w-[320px] md:w-[350px]"
+              className="relative p-4 w-full sm:w-[320px] md:w-[350px]"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               // custom={index}
             >
-              <div className="bg-white rounded-xl w-full shadow-sm border h-full flex flex-col gap-3 sm:gap-4 md:gap-[20px] hover:shadow-md transition">
-                <div className="flex justify-center">{service.icon}</div>
-                <div className="bg-[#F5F6FA] flex flex-col gap-2 text-left p-4 sm:p-5 md:p-6">
-                  <h3 className="text-lg sm:text-[18px] md:text-[20px] text-[#101827] font-bold">{service.title}</h3>
-                  <p className="text-[#101827] text-[10px] sm:text-[11px]">{service.description}</p>
-                  <p className="text-[9px] sm:text-[10px] text-[#788193]">{service.note}</p>
-                  <button className="w-full sm:w-[60%] md:w-[50%] bg-gray-100 hover:bg-gray-200 text-[10px] sm:text-[11px] md:text-[12px] font-[500] px-2 py-2 sm:px-3 sm:py-2 md:px-[12px] md:py-[11px] rounded-md border border-[#101827]">
-                    {service.button}
-                  </button>
+              <div className="relative p-[1px] rounded-xl overflow-hidden">
+                {/* Gradient Border */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-[#F78C1E1A] to-[#FEE6D612]"></div>
+                {/* Content */}
+                <div className="relative z-10 bg-white rounded-xl w-full h-full flex flex-col gap-3 sm:gap-4 md:gap-[20px] hover:shadow-md transition overflow-hidden">
+                  <div className="flex justify-center">{service.icon}</div>
+                  <div className="bg-[#F5F6FA] flex flex-col gap-2 text-left p-4 sm:p-5 md:p-6">
+                    <h3 className="text-lg sm:text-[18px] md:text-[20px] text-[#101827] font-bold">{service.title}</h3>
+                    <p className="text-[#101827] text-[10px] sm:text-[11px]">{service.description}</p>
+                    <p className="text-[9px] sm:text-[10px] text-[#788193]">{service.note}</p>
+                    <button className="w-full sm:w-[60%] md:w-[50%] bg-gray-100 hover:bg-gray-200 text-[10px] sm:text-[11px] md:text-[12px] font-[500] px-2 py-2 sm:px-3 sm:py-2 md:px-[12px] md:py-[11px] rounded-md border border-[#101827]">
+                      {service.button}
+                    </button>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -100,22 +105,27 @@ const ServicesSection = () => {
           {services.slice(2, 5).map((service, index) => (
             <motion.div
               key={index}
-              className="w-full sm:w-[320px] md:w-[350px]"
+              className="relative p-4 w-full sm:w-[320px] md:w-[350px]"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               // custom={index + 2}
             >
-              <div className="bg-white rounded-xl w-full shadow-sm border h-full flex flex-col gap-3 sm:gap-4 md:gap-[20px] hover:shadow-md transition">
-                <div className="flex justify-center">{service.icon}</div>
-                <div className="bg-[#F5F6FA] flex flex-col gap-2 text-left p-4 sm:p-5 md:p-6">
-                  <h3 className="text-lg sm:text-[18px] md:text-[20px] text-[#101827] font-bold">{service.title}</h3>
-                  <p className="text-[#101827] text-[10px] sm:text-[11px]">{service.description}</p>
-                  <p className="text-[9px] sm:text-[10px] text-[#788193]">{service.note}</p>
-                  <button className="w-full sm:w-[75%] md:w-[65%] bg-gray-100 hover:bg-gray-200 text-[10px] sm:text-[11px] md:text-[12px] font-[500] px-2 py-2 sm:px-3 sm:py-2 md:px-[12px] md:py-[11px] rounded-md border border-[#101827]">
-                    {service.button}
-                  </button>
+              <div className="relative p-[2px] rounded-xl overflow-hidden">
+                {/* Gradient Border */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#F78C1E1A] to-[#FEE6D612]"></div>
+                {/* Content */}
+                <div className="relative z-10 bg-white rounded-xl w-full h-full flex flex-col gap-3 sm:gap-4 md:gap-[20px] hover:shadow-md transition">
+                  <div className="flex justify-center">{service.icon}</div>
+                  <div className="bg-[#F5F6FA] flex flex-col gap-2 text-left p-4 sm:p-5 md:p-6">
+                    <h3 className="text-lg sm:text-[18px] md:text-[20px] text-[#101827] font-bold">{service.title}</h3>
+                    <p className="text-[#101827] text-[10px] sm:text-[11px]">{service.description}</p>
+                    <p className="text-[9px] sm:text-[10px] text-[#788193]">{service.note}</p>
+                    <button className="w-full sm:w-[75%] md:w-[65%] bg-gray-100 hover:bg-gray-200 text-[10px] sm:text-[11px] md:text-[12px] font-[500] px-2 py-2 sm:px-3 sm:py-2 md:px-[12px] md:py-[11px] rounded-md border border-[#101827]">
+                      {service.button}
+                    </button>
+                  </div>
                 </div>
               </div>
             </motion.div>

@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import { FaFacebook,  FaInstagram ,FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -42,6 +44,12 @@ const Footer = () => {
         <div className='col-span-2 md:col-span-1'>
           <h4 className='text-[#788193] text-[16px] sm:text-[18px] font-[700] mb-2'>Follow Us</h4>
           {/* Social media icons would go here */}
+          <div className='text-[#9CA3AF] flex gap-4 text-xl'>
+            <FaFacebook />
+            <FaInstagram />
+            <FaLinkedin />
+            <FaWhatsapp />
+          </div>
         </div>
       </div>
 
@@ -51,7 +59,7 @@ const Footer = () => {
       {/* Copyright section */}
       <div>
         <p className='text-center text-[#9CA3AF] text-[12px] sm:text-[14px] md:text-[16px] font-[400]'>
-          © 2025 [Your Agency Name]. All rights reserved
+          © 2025 Ecomex. All rights reserved
         </p>
       </div>
     </div>

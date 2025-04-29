@@ -1,49 +1,52 @@
 import React from 'react'
 import { FaInstagram, FaTimes } from 'react-icons/fa';
 import { FaStar } from 'react-icons/fa6';
-import arrowIcon from '../assets/Arrow.png'
+import { RiTwitterXFill } from "react-icons/ri";
+import { PiInstagramLogoDuotone } from "react-icons/pi";
+import { PiLinkedinLogoDuotone } from "react-icons/pi";
+import { FiArrowRight } from "react-icons/fi";
 
 const testimonials = [
   {
     name: "Ajith, Trivandrum Retailer ⚡",
     username: "@Ajith__",
     text: "They built my Shopify store in 10 days—sales are up 40%",
-    icon: <FaTimes />,
+    icon: <RiTwitterXFill />,
     avatar: "https://i.pravatar.cc/150?img=1",
   },
   {
     name: "Priya, Calicut Entrepreneur",
     username: "@Priya__",
     text: "The custom app they made is a game-changer for my business",
-    icon: <FaInstagram />,
+    icon: <PiLinkedinLogoDuotone />,
     avatar: "https://i.pravatar.cc/150?img=2",
   },
   {
     name: "Suresh, Kochi Exporter",
     username: "@Suresh__",
     text: "WooCommerce was perfect for us—affordable and flexible",
-    icon: <FaInstagram />,
+    icon: <PiInstagramLogoDuotone />,
     avatar: "https://i.pravatar.cc/150?img=3",
   },
   {
     name: "Jaisal Rathee",
     username: "@RatheeJaisal__",
     text: "Ecomax has completely changed how we prioritize feature requests. We now have a clear overview of our tasks, and priorities, and helped us stay transparent with our users.",
-    icon: <FaInstagram />,
+    icon: <PiInstagramLogoDuotone />,
     avatar: "https://i.pravatar.cc/150?img=4",
   },
   {
     name: "Emanuel Perez",
     username: "@Perez__",
     text: "Love this, current tools seem bloated and you pay for features you don't want. looking forward to seeing this progress",
-    icon: "",
+    icon: <PiInstagramLogoDuotone />,
     avatar: "https://i.pravatar.cc/150?img=5",
   },
   {
     name: "Gereltuya Ba",
     username: "@Geralt__",
     text: "Sharing a lovely little no-code tool for PMs I found today: Ecomax! Better user retention when your users know what to expect in the future of the product they are using today.",
-    icon: <FaTimes />,
+    icon: <RiTwitterXFill />,
     avatar: "https://i.pravatar.cc/150?img=6",
   },
 ];
@@ -78,7 +81,7 @@ const TestimonialSection = () => {
                   <p className="text-gray-500 text-xs sm:text-sm">{item.username}</p>
                 </div>
               </div>
-              <div className="text-gray-400 text-base sm:text-lg">{item.icon}</div>
+              <div className=" text-xl sm:text-xl">{item.icon}</div>
             </div>
             
             <div className="flex items-center text-yellow-400 text-xs sm:text-sm">
@@ -98,7 +101,7 @@ const TestimonialSection = () => {
         <button className='bg-[#101827] py-2 sm:py-3 md:py-[14px] px-4 sm:px-5 md:px-[20px] border rounded-lg md:rounded-[8px] mt-4 sm:mt-6 md:mt-8'>
           <div className='flex items-center gap-2 sm:gap-3 md:gap-4'>
             <p className='text-white text-sm sm:text-[14px] md:text-[16px] font-semibold'>Let's Talk</p>
-            <img src={arrowIcon} alt='Continue' className='w-3 h-3 sm:w-4 sm:h-4 md:w-[15px] md:h-[15px]'></img>
+            <FiArrowRight className='text-white text-xl'/>
           </div>
         </button>
       </div>

@@ -13,7 +13,8 @@ import TestimonialSection from './components/testimonial'
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
+      <div className="h-2"><hr/></div>
       <HeroSection />
       <ServicesSection />
       <PropertiesSection />
@@ -21,6 +22,7 @@ function App() {
       <StepsSection />
       <TestimonialSection/>
       <DownloadSection />
+      <div className="h-2 m-12 md:m-8 sm:m-6 "><hr/></div>
       <ContactSection />
       
       

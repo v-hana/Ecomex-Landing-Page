@@ -1,42 +1,42 @@
 import React from "react";
 import { motion } from "framer-motion"; // Make sure to import motion from framer-motion
-import step1Icon from '../assets/step1.png';
-import step2Icon from '../assets/step2.png';
-import step3Icon from '../assets/step3.png';
-import step4Icon from '../assets/step4.png';
-import step5Icon from '../assets/step5.png';
-import arrowIcon from '../assets/Arrow.png';
+import { FiArrowRight } from "react-icons/fi";
+import { GrSearch } from "react-icons/gr";
+import { LiaPenNibSolid } from "react-icons/lia";
+import { PiRocketLaunch } from "react-icons/pi";
+import { BsCpu } from "react-icons/bs";
+import { PiLifebuoy } from "react-icons/pi";
 
 const steps = [
   {
     sl_no: "Step 1",
     title: "Discovery",
     description: "Each challenge starts off with a video that describes the design objective.",
-    icon: <img src={step1Icon} alt="Icon 1" className='w-4 h-4 sm:w-5 sm:h-5'/>
+    icon: <GrSearch className='text-[#F78C1E] w-4 h-4 sm:w-5 sm:h-5'/> 
   },
   {
     sl_no: "Step 2",
     title: "Design",
     description: "We create a stunning, user-friendly store",
-    icon: <img src={step2Icon} alt="Icon 2" className='w-4 h-4 sm:w-5 sm:h-5'/>
+    icon: <LiaPenNibSolid className='text-[#F78C1E] w-5 h-5 sm:w-6 sm:h-6'/> 
   },
   {
     sl_no: "Step 3",
     title: "Develop",
     description: "We build it—Shopify, WooCommerce, or custom",
-    icon: <img src={step3Icon} alt="Icon 3" className='w-4 h-4 sm:w-5 sm:h-5'/>
+    icon: <BsCpu className='text-[#F78C1E] w-4 h-4 sm:w-5 sm:h-5'/>
   },
   {
     sl_no: "Step 4",
     title: "Launch",
     description: "Your store goes live, ready to sell",
-    icon: <img src={step4Icon} alt="Icon 4" className='w-4 h-4 sm:w-5 sm:h-5'/>
+    icon: <PiRocketLaunch className='text-[#F78C1E] w-5 h-5 sm:w-6 sm:h-6'/>
   },
   {
     sl_no: "Step 5",
     title: "Support",
     description: "We optimize and grow with you",
-    icon: <img src={step5Icon} alt="Icon 5" className='w-4 h-4 sm:w-5 sm:h-5'/>
+    icon: <PiLifebuoy className='text-[#F78C1E] w-5 h-5 sm:w-6 sm:h-6'/>
   },
 ];
 
@@ -172,9 +172,10 @@ const StepsSection = () => {
             <p className="text-white text-sm sm:text-base font-semibold">
               Start Your Journey Today
             </p>
-            <img src={arrowIcon} alt='Continue' className='w-3 h-3 sm:w-4 sm:h-4'/>
+            <FiArrowRight className='text-white text-xl'/>
           </div>
         </button>
+        
 
       </div>
 

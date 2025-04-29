@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PiUsers } from "react-icons/pi"; 
-import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { PiUsersBold } from "react-icons/pi";
+import { FaRegCheckCircle } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
+import { LuCircleGauge } from "react-icons/lu";
+import { SiSpeedtest } from "react-icons/si";
 
 // Import images
 // Note: In a real implementation, ensure these assets exist in your project
@@ -13,22 +16,22 @@ import arrowIcon from '../assets/Arrow.png';
 
 const properties = [
   {
-    icon: <img src={icon1} alt="Icon 1" className='w-6 h-6'/>,
+    icon: <LuCircleGauge className='text-2xl'/>,
     title: 'Tailored Solutions',
     description: 'We craft stores that match your brand and goals'
   },
   {
-    icon: <img src={icon2} alt="Icon 2" className='w-6 h-5'/>,
+    icon: <SiSpeedtest className='text-2xl'/>,
     title: 'Fast Turnaround',
     description: 'Live in as little as 14 days'
   },
   {
-    icon: <PiUsers className='text-2xl'/>,
+    icon: <PiUsersBold className='text-2xl'/>,
     title: 'Local Expertise',
     description: 'Built for Kerala businesses, trusted worldwide'
   },
   {
-    icon: <IoIosCheckmarkCircleOutline className='text-2xl'/>,
+    icon: <FaRegCheckCircle className='text-2xl'/>,
     title: 'Ongoing Support',
     description: "From launch to growth, we're with you"
   }
@@ -143,7 +146,7 @@ const PropertiesSection = () => {
       >
         <div className='flex items-center gap-3 md:gap-4'>
           <p className='text-white text-sm md:text-base font-semibold'>Talk to Our Experts</p>
-          <img src={arrowIcon} alt='Continue' className='w-3 h-3 md:w-4 md:h-4' />
+          <FiArrowRight className='text-white text-xl'/>
         </div>
       </motion.button>
     </div>
