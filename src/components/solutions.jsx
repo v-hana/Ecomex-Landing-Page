@@ -114,7 +114,7 @@ const ServicesSection = () => {
             >
               <div className="relative p-[2px] rounded-xl overflow-hidden">
                 {/* Gradient Border */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#F78C1E1A] to-[#FEE6D612]"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-[#F78C1E1A] to-[#FEE6D612]"></div>
                 {/* Content */}
                 <div className="relative z-10 bg-white rounded-xl w-full h-full flex flex-col gap-3 sm:gap-4 md:gap-[20px] hover:shadow-md transition">
                   <div className="flex justify-center">{service.icon}</div>
