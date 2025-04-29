@@ -112,7 +112,7 @@ const ServicesSection = () => {
               viewport={{ once: true, amount: 0.3 }}
               // custom={index + 2}
             >
-              <div className="relative p-[2px] rounded-xl overflow-hidden">
+              <div className="relative p-[1px] rounded-xl overflow-hidden">
                 {/* Gradient Border */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-[#F78C1E1A] to-[#FEE6D612]"></div>
                 {/* Content */}
