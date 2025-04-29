@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import StarIcon from '../assets/star.png';
-import BigStar from '../assets/BigStar.png'
 import { IoMail } from "react-icons/io5";
 import { IoMdCall } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";

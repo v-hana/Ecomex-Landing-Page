@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { FaFacebook,  FaInstagram ,FaLinkedin, FaWhatsapp } from "react-icons/fa";
 

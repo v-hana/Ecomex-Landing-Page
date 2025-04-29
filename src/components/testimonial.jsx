@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaInstagram, FaTimes } from 'react-icons/fa';
 import { FaStar } from 'react-icons/fa6';
 import { RiTwitterXFill } from "react-icons/ri";
 import { PiInstagramLogoDuotone } from "react-icons/pi";
