@@ -6,7 +6,7 @@ import { FiArrowRight } from "react-icons/fi";
 const DownloadSection = () => {
   return (
     <div className='flex flex-col-reverse md:flex-row justify-center items-center gap-8 md:gap-12 lg:gap-16 mb-6 md:mb-8 lg:mb-[40px] p-4 sm:p-8 md:p-12'>
-      <div className='w-full md:w-[50%] bg-gradient-to-b from-[#F78C1E] to-[#FFFFFF] border border-hidden rounded-2xl md:rounded-[34px] flex justify-center'>
+      <div className='w-full md:w-[50%] bg-gradient-to-b from-[#F78C1E] via-[#FFFFFF] to-[#FFFFFF] border border-hidden rounded-2xl md:rounded-[34px] flex justify-center'>
         <img 
           src={img} 
           alt='download' 

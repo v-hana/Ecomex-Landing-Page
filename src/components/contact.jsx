@@ -42,30 +42,53 @@ const Contact = () => {
     </div>
   );
 
+  // const LabelledTextarea = ({ label, field }) => (
+  //   <div className="relative w-full">
+  //     <div className="relative p-[1px]  rounded-md overflow-hidden">
+  //       {/* Gradient Border */}
+  //       <div className="absolute rounded-md bg-gradient-to-r from-[#FEE6D626] to-[#F78C1E26]"></div>
+  //       {/* Textarea */}
+  //       <textarea
+  //         rows="4"
+  //         value={form[field]}
+  //         onChange={handleChange(field)}
+  //         className="peer relative z-10 w-full mb-0  px-4 pt-6 pb-2 text-sm bg-[#F8F9FC] rounded-md outline-none transition resize-none"
+  //       />
+  //     </div>
+  //     <label
+  //       className={`
+  //         absolute left-4 -top-2 text-[11px] font-medium text-gray-700 bg-white px-1 z-20
+  //         peer-focus:text-orange-500
+  //       `}
+  //     >
+  //       {label}
+  //     </label>
+  //   </div>
+  // );
   const LabelledTextarea = ({ label, field }) => (
     <div className="relative w-full">
-      <div className="relative px-[1px] pt-[1px] pb-0 rounded-md overflow-hidden">
-        {/* Gradient Border */}
-        <div className="absolute inset-0  rounded-md bg-gradient-to-r from-[#FEE6D626] to-[#F78C1E26]"></div>
+      <label className="absolute -top-3 left-3 text-[11px] font-medium text-gray-700 bg-white px-1 z-30">
+        {label}
+      </label>
+  
+      <div className="relative">
+        {/* Gradient border */}
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#FEE6D626] to-[#F78C1E26] p-[1px]">
+          <div className="h-full w-full rounded-lg bg-[#F8F9FC]"></div>
+        </div>
+  
         {/* Textarea */}
         <textarea
           rows="4"
           value={form[field]}
           onChange={handleChange(field)}
-          className="peer relative z-10 w-full mb-0  px-4 pt-6 pb-2 text-sm bg-[#F8F9FC] rounded-md outline-none transition resize-none"
+          className="relative z-10 h-40 w-full resize-none rounded-lg bg-transparent p-3 text-black focus:outline-none"
         />
       </div>
-      <label
-        className={`
-          absolute left-4 -top-2 text-[11px] font-medium text-gray-700 bg-white px-1 z-20
-          peer-focus:text-orange-500
-        `}
-      >
-        {label}
-      </label>
     </div>
   );
-
+  
+  
   return (
     <div className="px-4 md:px-6 lg:px-12 text-center">
       <div>
@@ -105,9 +128,9 @@ const Contact = () => {
         </div>
       </div>
       
-      <div className="mt-[30px] sm:mt-[40px] flex flex-col gap-6 sm:gap-8 items-center">
+      <div className="mt-[30px] sm:mt-[40px] flex flex-col gap-8 sm:gap-10 items-center">
         <h4 className="text-[14px] sm:text-[16px] font-[600] text-[#F78C1E]">Contact Info:</h4>
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 w-full items-center justify-center">
+        <div className="flex flex-col sm:flex-row gap-8 sm:gap-8 w-full items-center justify-center">
           <div className=" rounded-[8px] overflow-hidden w-full sm:w-auto">
             
             <div className=" flex items-center gap-2 rounded-[8px] px-[12px] sm:px-[18px] py-[10px] sm:py-[14px] bg-[#F3F4F8] w-full">

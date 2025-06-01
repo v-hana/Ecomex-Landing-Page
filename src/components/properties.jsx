@@ -139,7 +139,7 @@ const PropertiesSection = () => {
       </div>
       
       <motion.button 
-        className='bg-[#101827] py-3 px-4 md:py-4 mb-2 md:px-5 border rounded-lg mt-8 md:mt-10 z-10 hover:bg-[#2d3748] transition-colors duration-300'
+        className='bg-[#101827] py-3 px-4 md:py-4 mb-6 md:px-5 border rounded-lg mt-8 md:mt-10 z-10 hover:bg-[#2d3748] transition-colors duration-300'
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.2 }}
