@@ -24,12 +24,13 @@ const DownloadSection = () => {
         <p className='text-sm sm:text-base lg:text-[16px] font-normal text-[#101827]'>
           Discover the key strategies and expert insights you need to successfully launch and grow your online store in 2025. This guide covers everything from choosing the right platform and setting up payments to driving traffic and scaling your business
         </p>
-        <button className='bg-[#101827] w-full sm:w-[50%] md:w-[60%] lg:w-[36%] py-3 md:py-[14px] px-4 md:px-[20px] border rounded-md md:rounded-[8px]'>
-          <div className='flex items-center justify-center md:justify-start gap-2 md:gap-4'>
-            <p className='text-white text-sm sm:text-base lg:text-[16px] font-semibold'>Download Now</p>
-           <FiArrowRight className='text-white text-xl'/>
-          </div>
-        </button>
+        <div className="flex md:justify-start justify-center">
+  <button className='bg-[#101827] w-fit inline-flex items-center py-3 md:py-[14px] px-4 md:px-[20px] border rounded-md md:rounded-[8px] gap-2 md:gap-4'>
+    <p className='text-white text-sm sm:text-base lg:text-[16px] font-semibold'>Download Now</p>
+    <FiArrowRight className='text-white text-xl'/>
+  </button>
+</div>
+
       </div>
       
     </div>

@@ -1,8 +1,4 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/autoplay";
 import { FiArrowRight } from "react-icons/fi";
 import image1 from '../assets/projectimg1.png'
 import image2 from '../assets/projectimg2.png'
@@ -44,42 +40,67 @@ const ProjectsSection = () => {
           {/* Right Gradient Shadow */}
           <div className="absolute top-0 right-0 h-full w-6 sm:w-10 md:w-[60px] z-10 pointer-events-none bg-gradient-to-l from-[#F78C1E] via-[#F78C1E4D] to-[#F78C1E00]" />
           
-          <div className="swiper-wrapper-container">
-            <Swiper
-              modules={[Autoplay]}
-              spaceBetween={20}
-              slidesPerView={1.1}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1.1,
-                  spaceBetween: 30,
-                },
-                768: {
-                  slidesPerView: 1.2,
-                  spaceBetween: 30,
-                },
-                1024: {
-                  slidesPerView: 1.25,
-                  spaceBetween: 40,
-                },
-              }}
-              autoplay={{ delay: 2500, disableOnInteraction: false }}
-              loop={true}
+          <div className="w-full overflow-hidden">
+            {/* Mobile and Small screens */}
+            <div 
+              className="flex sm:hidden animate-scroll-mobile"
             >
-              {images.map((url, index) => (
-                <SwiperSlide key={index} className="!w-full sm:!w-[80%] md:!w-[85%] lg:!w-[900px]">
+              {[...images, ...images, ...images].map((url, index) => (
+                <div 
+                  key={index} 
+                  className="flex-shrink-0 mr-5"
+                  style={{ width: 'calc(100vw - 80px)' }}
+                >
                   <img 
                     src={url} 
                     alt={`Slide ${index + 1}`} 
                     className="w-full h-auto"
                   />
-                </SwiperSlide>
+                </div>
               ))}
-            </Swiper>
+            </div>
+
+            {/* Medium screens */}
+            <div 
+              className="hidden sm:flex md:hidden animate-scroll-sm"
+            >
+              {[...images, ...images, ...images].map((url, index) => (
+                <div 
+                  key={index} 
+                  className="flex-shrink-0 mr-7"
+                  style={{ width: 'calc(80vw - 60px)' }}
+                >
+                  <img 
+                    src={url} 
+                    alt={`Slide ${index + 1}`} 
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Large screens and above */}
+            <div 
+              className="hidden md:flex animate-scroll-lg"
+            >
+              {[...images, ...images, ...images].map((url, index) => (
+                <div 
+                  key={index} 
+                  className="flex-shrink-0 mr-10"
+                  style={{ width: 'min(85vw, 900px)' }}
+                >
+                  <img 
+                    src={url} 
+                    alt={`Slide ${index + 1}`} 
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         
-        <div className='flex justify-center'>
+        <div className='flex justify-center mb-6 sm:mb-6 md:mb-6 lg:mb-6'>
           <button className='bg-[#101827] py-3 sm:py-3 md:py-[14px] px-4 sm:px-5 md:px-[20px] border rounded-lg md:rounded-[8px] mt-6 sm:mt-6 md:mt-8'>
             <div className='flex items-center gap-2 md:gap-4'>
               <p className='text-white text-sm sm:text-base lg:text-[16px] font-semibold'>View All Project</p>
@@ -88,6 +109,63 @@ const ProjectsSection = () => {
           </button>
         </div>
       </div>
+      
+      <style jsx>{`
+        /* Mobile animation */
+        @keyframes scroll-mobile {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(calc(-100vw * 4));
+          }
+        }
+        
+        /* Small screens animation */
+        @keyframes scroll-sm {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(calc(-80vw * 4));
+          }
+        }
+        
+        /* Large screens animation */
+        @keyframes scroll-lg {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(calc(-85vw * 4 - 40px * 4));
+          }
+        }
+        
+        .animate-scroll-mobile {
+          animation: scroll-mobile 15s linear infinite;
+        }
+        
+        .animate-scroll-sm {
+          animation: scroll-sm 18s linear infinite;
+        }
+        
+        .animate-scroll-lg {
+          animation: scroll-lg 20s linear infinite;
+        }
+        
+        .animate-scroll-mobile:hover,
+        .animate-scroll-sm:hover,
+        .animate-scroll-lg:hover {
+          animation-play-state: paused;
+        }
+        
+        /* Ensure smooth performance */
+        .animate-scroll-mobile,
+        .animate-scroll-sm,
+        .animate-scroll-lg {
+          will-change: transform;
+        }
+      `}</style>
     </div>
   )
 }
