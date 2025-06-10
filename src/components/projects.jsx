@@ -142,15 +142,15 @@ const ProjectsSection = () => {
         }
         
         .animate-scroll-mobile {
-          animation: scroll-mobile 15s linear infinite;
+          animation: scroll-mobile 30s linear infinite;
         }
         
         .animate-scroll-sm {
-          animation: scroll-sm 18s linear infinite;
+          animation: scroll-sm 35s linear infinite;
         }
         
         .animate-scroll-lg {
-          animation: scroll-lg 20s linear infinite;
+          animation: scroll-lg 40s linear infinite;
         }
         
         .animate-scroll-mobile:hover,
